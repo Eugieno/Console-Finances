@@ -98,3 +98,27 @@ for (var i = 0; i < finances.length;i++) {
     sum1 = sum1 + finances[i][1]
 }
 console.log(sum1)
+
+// Calculating the average changes in profit/losses over the entire period
+
+// Calculating changes(increments/decrements) and compling an array of changes and months
+let dateAndChange = [];
+for (var i = 0; i < finances.length-1;i++) {
+    var change = finances[i+1][1] - finances[i][1]    // in case of the assignment, will myarray[i][0]
+    dateAndChange.push([change,finances[i+1][1]])
+}
+var ALldateAndChange = dateAndChange
+console.log(ALldateAndChange) // new array containing increment and corresponsing month
+
+
+// Avg of changes (increments/decrements)
+sum = 0;
+for (var i = 0; i < ALldateAndChange.length;i++) {
+    sum = sum + ALldateAndChange[i][0]
+}
+sumOfchange = sum
+var avgChange = sumOfchange/ALldateAndChange.length
+console.log(avgChange)
+console.log(`sum of increments: ${sum}`)
+console.log(`Avg Change: ${avgChange}`)
+
