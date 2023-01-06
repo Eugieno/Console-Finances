@@ -92,9 +92,9 @@ var finances = [
 // Calculating the total number of months in the dataset
 let totalMonths = finances.length
 
-
-// sum1 = 0;
-// for (var i = 0; i < finances.length;i++) {
-//     sum1 = sum1 + finances[i][1]
-// }
-// console.log(sum1)
+// Calculating the net total amounts of profits/losses
+sum1 = 0;
+for (var i = 0; i < finances.length;i++) {
+    sum1 = sum1 + finances[i][1]
+}
+console.log(sum1)
