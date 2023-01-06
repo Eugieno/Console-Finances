@@ -87,5 +87,14 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+// JavaScript code that analyses the Financial data 
 
-console.log(finances.length)
+// Calculating the total number of months in the dataset
+let totalMonths = finances.length
+
+
+// sum1 = 0;
+// for (var i = 0; i < finances.length;i++) {
+//     sum1 = sum1 + finances[i][1]
+// }
+// console.log(sum1)
