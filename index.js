@@ -105,7 +105,7 @@ console.log(sum1)
 let dateAndChange = [];
 for (var i = 0; i < finances.length-1;i++) {
     var change = finances[i+1][1] - finances[i][1]    // in case of the assignment, will myarray[i][0]
-    dateAndChange.push([change,finances[i+1][1]])
+    dateAndChange.push([change,finances[i+1][0]])
 }
 var ALldateAndChange = dateAndChange
 console.log(ALldateAndChange) // new array containing increment and corresponsing month
