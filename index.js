@@ -87,17 +87,16 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-
+// JavaScript code that analyses Financial data 
 function myFunction () {
-    // JavaScript code that analyses the Financial data 
-
+    
     // Calculating the total number of months in the dataset
     let totalMonths = finances.length
 
     // Calculating the net total amounts of profits/losses
     netPL = 0;
     for (var i = 0; i < finances.length;i++) {
-        netPL = netPL + finances[i][1]
+        netPL += finances[i][1]
     }
     TotalnetPL = netPL
 
@@ -114,7 +113,7 @@ function myFunction () {
     // Avg of changes (increments/decrements)
     sum = 0;
     for (var i = 0; i < ALldateAndChange.length;i++) {
-        sum = sum + ALldateAndChange[i][0]
+        sum += ALldateAndChange[i][0]
     }
     sumOfchange = sum
     var avgChange = sumOfchange/ALldateAndChange.length
@@ -138,20 +137,23 @@ function myFunction () {
         }
     }
     // Dashboard - console
-    console.log(`Total Months: ${totalMonths}
-    Total (net profit/Losses): ${TotalnetPL}
-    Average Change: ${sum/ALldateAndChange.length}
-    Greatest increase in profits: ${maxmonth} $${max}
-    Greatest decrease in profits: ${minmonth} $${min}`)
+    console.log(`
+    Total Months: ${totalMonths}
+    Total (net profit/Losses): $${TotalnetPL}
+    Average Change: $${Math.round(100*avgChange)/100}
+    Greatest increase in profits: ${maxmonth} ($${max})
+    Greatest decrease in profits: ${minmonth} ($${min})`)
 
     // Dashboard - alert
     alert(`
     Financial Analysis
     -----------------------------------
     Total Months: ${totalMonths}
-    Total (net profit/Losses): ${TotalnetPL}
-    Average Change: ${sum/ALldateAndChange.length}
-    Greatest increase in profits: ${maxmonth} $${max}
-    Greatest decrease in profits: ${minmonth} $${min}`)
+    Total (net profit/Losses): $${TotalnetPL}
+    Average Change: $${Math.round(100*avgChange)/100}
+    Greatest increase in profits: ${maxmonth} ($${max})
+    Greatest decrease in profits: ${minmonth} ($${min})`)
 
 }
+
+myFunction()
