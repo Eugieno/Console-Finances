@@ -93,23 +93,21 @@ var finances = [
 let totalMonths = finances.length
 
 // Calculating the net total amounts of profits/losses
-sum1 = 0;
+netPL = 0;
 for (var i = 0; i < finances.length;i++) {
-    sum1 = sum1 + finances[i][1]
+    netPL = netPL + finances[i][1]
 }
-console.log(sum1)
+TotalnetPL = netPL
 
 // Calculating the average changes in profit/losses over the entire period
 
 // Calculating changes(increments/decrements) and compling an array of changes and months
 let dateAndChange = [];
 for (var i = 0; i < finances.length-1;i++) {
-    var change = finances[i+1][1] - finances[i][1]    // in case of the assignment, will myarray[i][0]
-    dateAndChange.push([change,finances[i+1][0]])
+    var change = finances[i+1][1] - finances[i][1]    // Change
+    dateAndChange.push([change,finances[i+1][0]]) //Appending [change,date] array onto a fresh array named (dateAndChange)
 }
-var ALldateAndChange = dateAndChange
-console.log(ALldateAndChange) // new array containing increment and corresponsing month
-
+var ALldateAndChange = dateAndChange  // new array containing increment and corresponsing dates
 
 // Avg of changes (increments/decrements)
 sum = 0;
@@ -118,7 +116,29 @@ for (var i = 0; i < ALldateAndChange.length;i++) {
 }
 sumOfchange = sum
 var avgChange = sumOfchange/ALldateAndChange.length
-console.log(avgChange)
-console.log(`sum of increments: ${sum}`)
-console.log(`Avg Change: ${avgChange}`)
+
+// Greatest increase and decrease in profits over the entire period 
+// Algorithm to search for the max increment and corresponding month
+let max = ALldateAndChange[0][0]
+let maxmonth = ALldateAndChange[0][1]
+let min = ALldateAndChange[0][0]
+let minmonth = ALldateAndChange[0][1]
+// create a function for searching the max 
+for (var i = 1; i < ALldateAndChange.length;i++) {
+    if (ALldateAndChange[i][0] > max) {
+        max = ALldateAndChange[i][0]
+        maxmonth = ALldateAndChange[i][1]
+    } 
+    
+    if (ALldateAndChange[i][0] < min) {
+        min = ALldateAndChange[i][0]
+        minmonth = ALldateAndChange[i][1]
+    }
+}
+// Dashboard 
+console.log(`Total Months: ${totalMonths}
+Total (net profit/Losses): ${TotalnetPL}
+Average Change: ${sum/ALldateAndChange.length}
+Greatest increase in profits: ${maxmonth} $${max}
+Greatest decrease in profits: ${minmonth} $${min}`)
 
