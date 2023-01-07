@@ -87,58 +87,71 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-// JavaScript code that analyses the Financial data 
 
-// Calculating the total number of months in the dataset
-let totalMonths = finances.length
+function myFunction () {
+    // JavaScript code that analyses the Financial data 
 
-// Calculating the net total amounts of profits/losses
-netPL = 0;
-for (var i = 0; i < finances.length;i++) {
-    netPL = netPL + finances[i][1]
-}
-TotalnetPL = netPL
+    // Calculating the total number of months in the dataset
+    let totalMonths = finances.length
 
-// Calculating the average changes in profit/losses over the entire period
-
-// Calculating changes(increments/decrements) and compling an array of changes and months
-let dateAndChange = [];
-for (var i = 0; i < finances.length-1;i++) {
-    var change = finances[i+1][1] - finances[i][1]    // Change
-    dateAndChange.push([change,finances[i+1][0]]) //Appending [change,date] array onto a fresh array named (dateAndChange)
-}
-var ALldateAndChange = dateAndChange  // new array containing increment and corresponsing dates
-
-// Avg of changes (increments/decrements)
-sum = 0;
-for (var i = 0; i < ALldateAndChange.length;i++) {
-    sum = sum + ALldateAndChange[i][0]
-}
-sumOfchange = sum
-var avgChange = sumOfchange/ALldateAndChange.length
-
-// Greatest increase and decrease in profits over the entire period 
-// Algorithm to search for the max increment and corresponding month
-let max = ALldateAndChange[0][0]
-let maxmonth = ALldateAndChange[0][1]
-let min = ALldateAndChange[0][0]
-let minmonth = ALldateAndChange[0][1]
-// create a function for searching the max 
-for (var i = 1; i < ALldateAndChange.length;i++) {
-    if (ALldateAndChange[i][0] > max) {
-        max = ALldateAndChange[i][0]
-        maxmonth = ALldateAndChange[i][1]
-    } 
-    
-    if (ALldateAndChange[i][0] < min) {
-        min = ALldateAndChange[i][0]
-        minmonth = ALldateAndChange[i][1]
+    // Calculating the net total amounts of profits/losses
+    netPL = 0;
+    for (var i = 0; i < finances.length;i++) {
+        netPL = netPL + finances[i][1]
     }
-}
-// Dashboard 
-console.log(`Total Months: ${totalMonths}
-Total (net profit/Losses): ${TotalnetPL}
-Average Change: ${sum/ALldateAndChange.length}
-Greatest increase in profits: ${maxmonth} $${max}
-Greatest decrease in profits: ${minmonth} $${min}`)
+    TotalnetPL = netPL
 
+    // Calculating the average changes in profit/losses over the entire period
+
+    // Calculating changes(increments/decrements) and compling an array of changes and months
+    let dateAndChange = [];
+    for (var i = 0; i < finances.length-1;i++) {
+        var change = finances[i+1][1] - finances[i][1]    // Change
+        dateAndChange.push([change,finances[i+1][0]]) //Appending [change,date] array onto a fresh array named (dateAndChange)
+    }
+    var ALldateAndChange = dateAndChange  // new array containing increment and corresponsing dates
+
+    // Avg of changes (increments/decrements)
+    sum = 0;
+    for (var i = 0; i < ALldateAndChange.length;i++) {
+        sum = sum + ALldateAndChange[i][0]
+    }
+    sumOfchange = sum
+    var avgChange = sumOfchange/ALldateAndChange.length
+
+    // Greatest increase and decrease in profits over the entire period 
+    // Algorithm to search for the max increment and corresponding month
+    let max = ALldateAndChange[0][0]
+    let maxmonth = ALldateAndChange[0][1]
+    let min = ALldateAndChange[0][0]
+    let minmonth = ALldateAndChange[0][1]
+    // create a function for searching the max 
+    for (var i = 1; i < ALldateAndChange.length;i++) {
+        if (ALldateAndChange[i][0] > max) {
+            max = ALldateAndChange[i][0]
+            maxmonth = ALldateAndChange[i][1]
+        } 
+        
+        if (ALldateAndChange[i][0] < min) {
+            min = ALldateAndChange[i][0]
+            minmonth = ALldateAndChange[i][1]
+        }
+    }
+    // Dashboard - console
+    console.log(`Total Months: ${totalMonths}
+    Total (net profit/Losses): ${TotalnetPL}
+    Average Change: ${sum/ALldateAndChange.length}
+    Greatest increase in profits: ${maxmonth} $${max}
+    Greatest decrease in profits: ${minmonth} $${min}`)
+
+    // Dashboard - alert
+    alert(`
+    Financial Analysis
+    -----------------------------------
+    Total Months: ${totalMonths}
+    Total (net profit/Losses): ${TotalnetPL}
+    Average Change: ${sum/ALldateAndChange.length}
+    Greatest increase in profits: ${maxmonth} $${max}
+    Greatest decrease in profits: ${minmonth} $${min}`)
+
+}
