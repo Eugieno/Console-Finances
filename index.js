@@ -87,7 +87,7 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
-// JavaScript code that analyses Financial data 
+// JavaScript function that analyses Financial data 
 function myFunction () {
     
     // Calculating the total number of months in the dataset
@@ -119,18 +119,18 @@ function myFunction () {
     var avgChange = sumOfchange/ALldateAndChange.length
 
     // Greatest increase and decrease in profits over the entire period 
-    // Algorithm to search for the max increment and corresponding month
     let max = ALldateAndChange[0][0]
     let maxmonth = ALldateAndChange[0][1]
     let min = ALldateAndChange[0][0]
     let minmonth = ALldateAndChange[0][1]
-    // create a function for searching the max 
+
     for (var i = 1; i < ALldateAndChange.length;i++) {
+        // max - greatest increase
         if (ALldateAndChange[i][0] > max) {
             max = ALldateAndChange[i][0]
             maxmonth = ALldateAndChange[i][1]
         } 
-        
+        // min - greatest decrease
         if (ALldateAndChange[i][0] < min) {
             min = ALldateAndChange[i][0]
             minmonth = ALldateAndChange[i][1]
@@ -156,4 +156,3 @@ function myFunction () {
 
 }
 
-myFunction()
