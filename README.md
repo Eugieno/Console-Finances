@@ -36,8 +36,8 @@ Variables max, min, maxmonth and minmonth were initialised as the first (corresp
 The required outputs of the analysis is summarised in the print codes below; 
 ![Outputs of the analysis](./assets/images/display.JPG)
 
-The console outputs:
+#### The console outputs:
 ![Console outputs](./assets/images/Console%20print.JPG)
 
-The browser user interface and outputs:
+#### The browser user interface and outputs:
 ![Browser user interface and outputs](./assets/images/User%20interface.JPG)
