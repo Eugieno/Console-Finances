@@ -3,7 +3,7 @@
 ## What problem was solved
 The financial records for a hypothetical company was analysed using codes written in JavaScript. The financial records was provided in an array composed of arrays with two fields namely; Date and Profit/Losses.
 
-The information that was estimated from the analysis include;
+The information that was estimated from the analysis are;
 1. Total number of months in the dataset
 2. Net amount of Profit/Losses over the entire period
 3. Average of changes in Profit/Losses over the entire period
@@ -12,7 +12,7 @@ The information that was estimated from the analysis include;
 
 
 ## How was the problem solved 
-The problem was solved sequentially as listed above.
+The problem was solved sequentially according to the tasks labelled above. 
 
 ### 1. Total Months
 ![Total number of months in dataset](./assets/images/Months.JPG)
@@ -34,6 +34,7 @@ Another for loop was created (Line 114-117) to search through the new dateAndCha
 Variables max, min, maxmonth and minmonth were initialised as the first (corresponding) elements within the array; then, for loop was used to search the array and update these variables based on the given conditions in Line 129 and 134. 
 
 The required outputs of the analysis is summarised in the print codes below; 
+
 ![Outputs of the analysis](./assets/images/display.JPG)
 
 #### The console outputs:
