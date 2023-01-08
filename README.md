@@ -37,6 +37,10 @@ The required outputs of the analysis is summarised by the print codes below;
 
 ![Outputs of the analysis](./assets/images/display.JPG)
 
+##### For better UX
+The entire code base was placed inside a function called myFunction. This function was then attached to the html button element - to be called "on-click". 
+
+
 ## Outcome 
 #### The console outputs:
 ![Console outputs](./assets/images/Console%20print.JPG)
