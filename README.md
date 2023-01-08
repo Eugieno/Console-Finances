@@ -33,10 +33,11 @@ Another for loop was created (Line 114-117) to search through the new dateAndCha
 
 Variables max, min, maxmonth and minmonth were initialised as the first (corresponding) elements within the array; then, for loop was used to search the array and update these variables based on the given conditions in Line 129 and 134. 
 
-The required outputs of the analysis is summarised in the print codes below; 
+The required outputs of the analysis is summarised by the print codes below; 
 
 ![Outputs of the analysis](./assets/images/display.JPG)
 
+## Outcome 
 #### The console outputs:
 ![Console outputs](./assets/images/Console%20print.JPG)
 
