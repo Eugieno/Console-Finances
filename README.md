@@ -14,21 +14,21 @@ The information that was estimated from the analysis include;
 ## How was the problem solved 
 The problem was solved sequentially as listed above.
 
-1. Total Months
+### 1. Total Months
 ![Total number of months in dataset](./assets/images/Months.JPG)
 As seen in the code above, the length property was called on the array (finances) to obtain total months in the data set
 
-2. Net Profit/Losses
+### 2. Net Profit/Losses
 ![Net Profit/Losses](./assets/images/Net%20profit.JPG)
 The netPL was initalised to zero and for loop was used to iterate through the profit/losses data within the array to form a loop that adds consecutive profit/losses values and updates their cummulative sum in the variable netPL
 
-3. Average of changes 
+### 3. Average of changes 
 ![Average of changes](./assets/images/Average%20of%20changes.JPG)
 The dateAndChange is an empty array at the beginning of the loop. A for loop was used to iterate through the finances array to calculate changes in profit or Losses value - which is the algebraic difference between consecutive P/L values within the array (see Line 108). In Line 109, each calculated change is appended onto the dateAndChange array together with the date corresponding to the current month. 
 
 Another for loop was created (Line 114-117) to search through the new dateAndChange array and sum up the Change values. The sum obtained is then divided by the total months to obtain the average of changes value required. 
 
-4. Greatest Increase and decrease
+### 4. Greatest Increase and decrease
 ![Greatest increase and decrease in profit and losses](./assets/images/Greatest%20increase%20and%20decrease%20in%20profit%20and%20losses.JPG)
 
 Variables max, min, maxmonth and minmonth were initialised as the first (corresponding) elements within the array; then, for loop was used to search the array and update these variables based on the given conditions in Line 129 and 134. 
