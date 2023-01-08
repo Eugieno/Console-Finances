@@ -20,4 +20,10 @@ As seen in the code above, the length property was called on the array (finances
 
 2. Net Profit/Losses
 ![Net Profit/Losses](./assets/images/Net%20profit.JPG)
-The netPL was initalised to zero and for loop was used to iterate through the profit/losses data within the array to form a loop that adds consecutive profit/losses values and updates them in the variable netPL
+The netPL was initalised to zero and for loop was used to iterate through the profit/losses data within the array to form a loop that adds consecutive profit/losses values and updates their cummulative sum in the variable netPL
+
+3. Average of changes 
+dateAndChange is an empty array at the beginning of the loop. A for loop was used to iterate through the finances array to calculate changes in profit or Losses value - which is the algebraic difference between consecutive P/L values within the array (see Line 108). In Line 109, each calculated change is appended onto the dateAndChange array together with the date corresponding to the current month. 
+![Average of changes](./assets/images/Average%20of%20changes.JPG)
+
+Another for loop was created (Line 114-117) to search through the new dateAndChange array and sum up the Change values. The sum obtained is then divided by the total months to obtain the average of changes value required. 
