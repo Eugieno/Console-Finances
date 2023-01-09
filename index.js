@@ -91,14 +91,14 @@ var finances = [
 function myFunction () {
     
     // Calculating the total number of months in the dataset
-    let totalMonths = finances.length
+    let totalMonths = finances.length;
 
     // Calculating the net total amounts of profits/losses
-    netPL = 0;
+    var netPL = 0;
     for (var i = 0; i < finances.length;i++) {
         netPL += finances[i][1]
     }
-    TotalnetPL = netPL
+    TotalnetPL = netPL;
 
     // Calculating the average changes in profit/losses over the entire period
 
@@ -108,21 +108,21 @@ function myFunction () {
         var change = finances[i+1][1] - finances[i][1]    // Change
         dateAndChange.push([change,finances[i+1][0]]) //Appending [change,date] array onto a fresh array named (dateAndChange)
     }
-    var ALldateAndChange = dateAndChange  // new array containing increment and corresponsing dates
+    var ALldateAndChange = dateAndChange;  // new array containing increment and corresponsing dates
 
     // Avg of changes (increments/decrements)
-    sum = 0;
+    var sum = 0;
     for (var i = 0; i < ALldateAndChange.length;i++) {
         sum += ALldateAndChange[i][0]
     }
-    sumOfchange = sum
-    var avgChange = sumOfchange/ALldateAndChange.length
+    var sumOfchange = sum;
+    var avgChange = sumOfchange/ALldateAndChange.length;
 
     // Greatest increase and decrease in profits over the entire period 
-    let max = ALldateAndChange[0][0]
-    let maxmonth = ALldateAndChange[0][1]
-    let min = ALldateAndChange[0][0]
-    let minmonth = ALldateAndChange[0][1]
+    let max = ALldateAndChange[0][0];
+    let maxmonth = ALldateAndChange[0][1];
+    let min = ALldateAndChange[0][0];
+    let minmonth = ALldateAndChange[0][1];
 
     for (var i = 1; i < ALldateAndChange.length;i++) {
         // max - greatest increase
@@ -140,9 +140,9 @@ function myFunction () {
     console.log(`
     Total Months: ${totalMonths}
     Total (net profit/Losses): $${TotalnetPL}
-    Average Change: $${Math.round(100*avgChange)/100}
+    Average Change: $${Math.round(100*avgChange)/100} per month
     Greatest increase in profits: ${maxmonth} ($${max})
-    Greatest decrease in profits: ${minmonth} ($${min})`)
+    Greatest decrease in profits: ${minmonth} ($${min})`);
 
     // Dashboard - alert
     alert(`
@@ -150,9 +150,9 @@ function myFunction () {
     -----------------------------------
     Total Months: ${totalMonths}
     Total (net profit/Losses): $${TotalnetPL}
-    Average Change: $${Math.round(100*avgChange)/100}
+    Average Change: $${Math.round(100*avgChange)/100} per month
     Greatest increase in profits: ${maxmonth} ($${max})
-    Greatest decrease in profits: ${minmonth} ($${min})`)
+    Greatest decrease in profits: ${minmonth} ($${min})`);
 
 }
 
