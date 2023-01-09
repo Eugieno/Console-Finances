@@ -3,7 +3,7 @@
 ## What problem was solved
 The financial records for a hypothetical company was analysed using codes written in JavaScript. The financial records was provided in an array composed of arrays with two fields namely; Date and Profit/Losses.
 
-The information that was estimated from the analysis are;
+The following were estimated from the analyses;
 1. Total number of months in the dataset
 2. Net amount of Profit/Losses over the entire period
 3. Average of changes in Profit/Losses over the entire period
@@ -12,7 +12,7 @@ The information that was estimated from the analysis are;
 
 
 ## How was the problem solved 
-The problem was solved sequentially according to the tasks labelled above. 
+The problem was solved sequentially as labelled above. The details of the thought process going into resolving each task is as below; 
 
 ### 1. Total Months
 ![Total number of months in dataset](./assets/images/Months.JPG)
@@ -26,9 +26,9 @@ The netPL was initalised to zero and for loop was used to iterate through the pr
 ![Average of changes](./assets/images/Average%20of%20changes.JPG)
 The dateAndChange is an empty array at the beginning of the loop. A for loop was used to iterate through the finances array to calculate changes in profit or Losses value - which is the algebraic difference between consecutive P/L values within the array (see Line 108). In Line 109, each calculated change is appended onto the dateAndChange array together with the date corresponding to the current month. 
 
-Another for loop was created (Line 114-117) to search through the new dateAndChange array and sum up the Change values. The sum obtained is then divided by the total months to obtain the average of changes value required. 
+Another for loop was created (Line 114-117) to search through the new dateAndChange array and sum up the Change values. The sum obtained is then divided by the total months to obtain the average of changes value required (see Line 119). 
 
-### 4. Greatest Increase and decrease
+### 4. Greatest Increase and decrease in P/L over the entire period
 ![Greatest increase and decrease in profit and losses](./assets/images/Greatest%20increase%20and%20decrease%20in%20profit%20and%20losses.JPG)
 
 Variables max, min, maxmonth and minmonth were initialised as the first (corresponding) elements within the array; then, for loop was used to search the array and update these variables based on the given conditions in Line 129 and 134. 
